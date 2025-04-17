@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  api: 
+    image: lms_test
+    build: 
+      context: api
+      dockerfile: ./LMS/Dockerfile
+    hostname: lms
+    ports: 
+      - "5000:5000"
+    networks:
+      - lms_network
+
+networks:
+  lms_network:
+    driver: bridge
+    name: lms-network

@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: tacilent.internal
+  namespace: dev-stack
+spec:
+  secretName: tacilent-internal-tls
+  issuerRef:
+    name: letsencrypt-prod
+  dnsNames:
+  - '*.tacilent.internal'
+  - .idp.tacilent.internal
+  - idp-admin.tacilent.internal

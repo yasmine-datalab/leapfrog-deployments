@@ -1,0 +1,15 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: oidc-auth
+config:
+  issuer: https://idp.tacilent.internal/.well-known/openid-configuration
+  client_id:
+    - kong-client
+  client_secret:
+    - UAo4mf2CwrRivP7isG8joZOqicMfPnU0
+  redirect_uri:
+    - http://127.0.0.1.nip.io/echo
+
+plugin: openid-connect
+global: true
