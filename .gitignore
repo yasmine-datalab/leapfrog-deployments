@@ -1,2 +1,5 @@
 .env
 ssl
+leapfrog-discussion-service
+leapfrog-notification-service
+leapfrog-subscription-service
